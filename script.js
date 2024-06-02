@@ -6,7 +6,7 @@ const longoBt = document.querySelector('.app__card-button--longo')
 const botaoIniciar = document.querySelector('.app__card-primary-button');
 const displayTempo = document.querySelector('#timer');
 const banner = document.querySelector('.app__image');
-const titulo = document.querySelector('.app__title')
+const titulo = document.querySelector('.app__title');
 
 
 focoBt.addEventListener('click', () => {
@@ -30,7 +30,33 @@ longoBt.addEventListener('click', () => {
 
 function alterarContexto(contexto) {
     html.setAttribute('data-contexto', contexto)
+    // Por que que aqui foi usado essas aspas ` ` DIFERENTES?
     banner.setAttribute('src', `./imagens/${contexto}.png`)
+    switch (contexto) {
+        case "foco":
+            // o metodo innerHTML tambem é bom para fazer LISTAS
+            titulo.innerHTML = `
+            Otimize sua produtividade,<br>
+                <strong class="app__title-strong">mergulhe no que importa.</strong>
+            `
+            break;
+        
+        case "descanso-curto":
+            titulo.innerHTML = `
+            Quer dar uma respirada? <br>
+                <strong class="app__title-strong">Faça uma pausa curta!</strong>
+            `
+            break;
+        
+        case "descanso-longo":
+            titulo.innerHTML = `
+            Hora de voltar à superfície <br>
+                <strong class="app__title-strong">Faça uma pausa longa.</strong>
+            `
+
+        default:
+            break;
+    }
 }
 
 /*
