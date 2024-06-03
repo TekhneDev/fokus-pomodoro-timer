@@ -7,10 +7,12 @@ const botaoIniciar = document.querySelector('.app__card-primary-button');
 const displayTempo = document.querySelector('#timer');
 const banner = document.querySelector('.app__image');
 const titulo = document.querySelector('.app__title');
+const botoes = document.querySelectorAll('.app__card-button')
 
 
 focoBt.addEventListener('click', () => {
     alterarContexto('foco')
+    focoBt.classList.add('active')
 })
 
 //elemento.addEventListener(evento, callback);
@@ -22,13 +24,18 @@ focoBt.addEventListener('click', () => {
 
 curtoBt.addEventListener('click', () => {
     alterarContexto('descanso-curto')
+    curtoBt.classList.add('active')
 })
 
 longoBt.addEventListener('click', () => {
     alterarContexto('descanso-longo')
+    longoBt.classList.add('active')
 })
 
 function alterarContexto(contexto) {
+    botoes.forEach(function(contexto){
+        contexto.classList.remove('active')
+    })
     html.setAttribute('data-contexto', contexto)
     // Por que que aqui foi usado essas aspas ` ` DIFERENTES?
     banner.setAttribute('src', `./imagens/${contexto}.png`)
