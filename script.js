@@ -3,6 +3,7 @@ const focoBt = document.querySelector('.app__card-button--foco')
 const curtoBt = document.querySelector('.app__card-button--curto')
 const longoBt = document.querySelector('.app__card-button--longo')
 //
+//
 const botaoIniciar = document.querySelector('.app__card-primary-button')
 const displayTempo = document.querySelector('#timer')
 const banner = document.querySelector('.app__image')
