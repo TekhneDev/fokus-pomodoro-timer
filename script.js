@@ -3,10 +3,10 @@ const focoBt = document.querySelector('.app__card-button--foco')
 const curtoBt = document.querySelector('.app__card-button--curto')
 const longoBt = document.querySelector('.app__card-button--longo')
 //
-const botaoIniciar = document.querySelector('.app__card-primary-button');
-const displayTempo = document.querySelector('#timer');
-const banner = document.querySelector('.app__image');
-const titulo = document.querySelector('.app__title');
+const botaoIniciar = document.querySelector('.app__card-primary-button')
+const displayTempo = document.querySelector('#timer')
+const banner = document.querySelector('.app__image')
+const titulo = document.querySelector('.app__title')
 const botoes = document.querySelectorAll('.app__card-button')
 const musicaFocoInput = document.querySelector('#alternar-musica')
 const musica = new Audio('/sons/luna-rise-part-one.mp3')
