@@ -8,10 +8,12 @@ const displayTempo = document.querySelector('#timer')
 const banner = document.querySelector('.app__image')
 const titulo = document.querySelector('.app__title')
 const botoes = document.querySelectorAll('.app__card-button')
+const startPauseBt = document.querySelector('#start-pause')
 const musicaFocoInput = document.querySelector('#alternar-musica')
 const musica = new Audio('/sons/luna-rise-part-one.mp3')
 
 let tempoDecorridoEmSegundos = 5
+let intervaloId = null
 
 musica.loop = true
 
@@ -80,9 +82,18 @@ function alterarContexto(contexto) {
     }
 }
 
-const 
+const contagemRegressiva = () => {
+    //iniciar()
+    tempoDecorridoEmSegundos -= 1
+    console.log('Temporizador: ' + tempoDecorridoEmSegundos)
+}
 
+startPauseBt.addEventListener('click', contagemRegressiva)
 
+function iniciar() {
+    // 1000 porque a funcao recebe o valor em milissegundos 
+    intervaloId = setInterval(contagemRegressiva, 1000)
+}
 
 /*
 const duracaoFoco = 1500; 
