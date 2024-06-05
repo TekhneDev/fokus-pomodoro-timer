@@ -11,7 +11,7 @@ const botoes = document.querySelectorAll('.app__card-button')
 const musicaFocoInput = document.querySelector('#alternar-musica')
 const musica = new Audio('/sons/luna-rise-part-one.mp3')
 
-let tem
+let tempoDecorridoEmSegundos = 5
 
 musica.loop = true
 
@@ -79,6 +79,10 @@ function alterarContexto(contexto) {
             break;
     }
 }
+
+const 
+
+
 
 /*
 const duracaoFoco = 1500; 
