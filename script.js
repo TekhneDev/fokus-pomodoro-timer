@@ -83,6 +83,11 @@ function alterarContexto(contexto) {
 }
 
 const contagemRegressiva = () => {
+    if(tempoDecorridoEmSegundos <= 0) {
+        zerar()
+        alert('Tempo finalizado!')
+        return
+    }
     tempoDecorridoEmSegundos -= 1
     console.log('Temporizador: ' + tempoDecorridoEmSegundos)
 }
@@ -94,6 +99,10 @@ function iniciar() {
     intervaloId = setInterval(contagemRegressiva, 1000)
 }
 
+function zerar() {
+    clearInterval(intervaloId)
+    intervaloId = null
+}
 /*
 const duracaoFoco = 1500; 
 const duracaoDescansoCurto = 300; 
