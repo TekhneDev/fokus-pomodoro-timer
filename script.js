@@ -83,12 +83,11 @@ function alterarContexto(contexto) {
 }
 
 const contagemRegressiva = () => {
-    //iniciar()
     tempoDecorridoEmSegundos -= 1
     console.log('Temporizador: ' + tempoDecorridoEmSegundos)
 }
 
-startPauseBt.addEventListener('click', contagemRegressiva)
+startPauseBt.addEventListener('click', iniciar)
 
 function iniciar() {
     // 1000 porque a funcao recebe o valor em milissegundos 
