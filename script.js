@@ -26,6 +26,8 @@ musicaFocoInput.addEventListener('change', () => {
     }
 })
 
+// Implementar ...
+
 focoBt.addEventListener('click', () => {
     alterarContexto('foco')
     focoBt.classList.add('active')
