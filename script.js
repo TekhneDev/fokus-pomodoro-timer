@@ -27,6 +27,7 @@ musicaFocoInput.addEventListener('change', () => {
 })
 
 // Implementar ...
+// Ver aúdios corretamente
 
 focoBt.addEventListener('click', () => {
     alterarContexto('foco')
