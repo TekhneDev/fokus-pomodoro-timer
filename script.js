@@ -96,7 +96,7 @@ const contagemRegressiva = () => {
 }
 
 startPauseBt.addEventListener('click', iniciarOuPausar)
-
+//
 function iniciarOuPausar() {
     if(intervaloId) {
         zerar()
